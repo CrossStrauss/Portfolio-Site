@@ -23,11 +23,11 @@ body {
 
 .bitMoji {
   border-radius: 50%;
-  width: 10vw;
+  width: auto;
   height: 20vh;
   margin-left: 1%;
   margin-top: 0;
-  border: 5px solid #F05454;
+  border: 3px solid #F05454;
 }
 
 .bioTxtHolder {
@@ -69,10 +69,12 @@ body {
 
 .contactIcons {
   margin-bottom: 2vh;
+  font-size: 5rem;
 }
 
 .contactTxt {
   margin-bottom: 5vh;
+  font-size: 2vw;
 }
 
 .carPicHolder {
@@ -100,6 +102,9 @@ body {
 .contactForm {
   margin-top: 15vh;
   margin-left: 1vw;
+  height: auto;
+  width: 100%;
+  font-size: 2vh;
 }
 
 .const {
@@ -238,7 +243,7 @@ footer .footerText {
 }
 
 .HsecondaryPics {
-  width: 5vw;
+  width: auto;
   height: 10vh;
 }
 
@@ -263,11 +268,15 @@ footer .footerText {
   border: 5px solid #F05454;
 }
 
+hr {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
 /*#endregion h*/
 /*#region I*/
 .IconBox {
-  width: 80vw;
-  height: 10vh;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 14% 14% 14% 14% 14% 14% 14%;
@@ -601,7 +610,7 @@ section:nth-child(3) {
 }
 
 .textLabel {
-  font-size: 1vw;
+  font-size: 1.5vw;
   margin-top: 2vh;
 }
 
@@ -687,7 +696,7 @@ section:nth-child(3) {
     display: none;
   }
   .contactTxt {
-    font-size: 3vh;
+    font-size: 4vh;
   }
   .contactDetailsBox {
     width: 100%;
