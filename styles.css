@@ -624,6 +624,15 @@ section:nth-child(3) {
   margin-top: 2vh;
 }
 
+.touchDetector {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #DDDDDD;
+  opacity: 0.2;
+  z-index: 1;
+}
+
 /*#endregion T*/
 /*#region U*/
 .underC {
@@ -717,6 +726,10 @@ section:nth-child(3) {
   }
   .thirdHeader i {
     margin-left: 7vh;
+  }
+  main {
+    height: 100vh;
+    overflow-y: visible;
   }
 }
 

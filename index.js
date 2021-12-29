@@ -3,7 +3,11 @@
 let index = 0; // Page section index 
 let lastTime = 0; // Last recorded mouse wheel event time.
 let pageMove = false; // Boolean to see if page animation has completed
+let lastTouch = 0 //Last touch event value
+let firstPt; // First Y coordinate
+let scndTch// Secony Y coordinate
 const animDur = 500; // Animation duration
+const touchDur = 250; //Touch duration
 
 //============= Scroll wheel detection and page movement =============//
 
@@ -35,6 +39,39 @@ $(window).on('wheel', { passive: false },function(e){
     }
     lastTime = currentTime;
 })
+
+$(window).on('touchstart', function(e){
+    firstPt = e.originalEvent.changedTouches[0].pageY; 
+    console.log("Start");
+})
+
+$(window).on('touchend', function(e){
+    scndTch = e.originalEvent.changedTouches[0].pageY;
+    console.log(e.originalEvent.changedTouches[0].pageY);
+
+    if(firstPt > scndTch){
+        if (index == 2){
+            index = 2;
+        } else{
+            index++;
+        } 
+    }
+    if(firstPt < scndTch){
+        if (index == 0){
+            index = 0;
+        } else{
+            index--;
+        }
+    }
+    movePage();
+    console.log("Test run finished");
+})
+
+function movePage(){
+    console.log('Moved');
+    $('section')[index].scrollIntoView({behavior:'smooth'});
+}
+
 
 //============= SideNav bar page control =============//
 
