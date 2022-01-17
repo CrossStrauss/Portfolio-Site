@@ -86,7 +86,7 @@ body{
 
 /*#region C*/
 .carouselHolder{
-    width: 80vw;
+    width: 75vw;
     height: 60vh;
     margin-top: 2.5vh;
 }
@@ -326,6 +326,7 @@ section{
 
 section:nth-child(1){
     @include centerCont;
+    
 }
 
 section:nth-child(2){
@@ -385,7 +386,10 @@ section:nth-child(3){
 /*#endregion S*/
 
 /*#region T*/
-
+.tabs{
+    //visibility:hidden;
+    display: none;
+}
 .third{
     @include sectionStyles();
     i{
@@ -482,6 +486,7 @@ section:nth-child(3){
     @include centerCont();
     margin-top: 20vh;
 }
+
 /*#endregion U*/
 
 //============================================//
@@ -491,8 +496,27 @@ section:nth-child(3){
     .sideNav{
         visibility: hidden;
         display: none;
+        width: 13vw;
+        margin-left: 2vw;
+        top: 22vh;
+        height:50vh;
+        opacity: 1;
     } 
-      
+    .first{
+        //margin-left: 15vw;
+        width:90vw;
+        height:75vh;
+    }
+    .second{
+        //margin-left: 15vw;
+        width:90vw;
+        height:75vh;
+    }
+    .third{
+        //margin-left: 15vw;
+        width:90vw;
+        height:75vh;
+    }
     .firstTitle{
         // margin-left: 7vh;
         // font-size: 5vh;
@@ -526,7 +550,9 @@ section:nth-child(3){
     }
 
     .bioTxt{
+        //margin-left: 2vw;
         font-size: 3vh;
+        width: 75%;
     }
 
     .HsecondaryPics{
@@ -535,7 +561,7 @@ section:nth-child(3){
     }
     
     .carpc{
-        width: 30vh;
+        width: auto;
         height: 60vw;
         margin-top: 10vh;
     }
@@ -544,16 +570,25 @@ section:nth-child(3){
         visibility: hidden;
         display: none;
     }
+
+    .carouselHolder{
+        width: 90vw;
+        height: 70vh;
+        margin-top: 2.5vh;
+    }
     .ListBox{
         display: none;
     }
-
+    footer{
+        visibility: hidden;
+        display: none;  
+    }
     .firstTitle{
         display: none;
     }
 
     .contactTxt{
-        font-size: 4vh; 
+        font-size: 5vw; 
     }
     .contactDetailsBox{
         width: 100%;
@@ -578,9 +613,74 @@ section:nth-child(3){
     }
     main{
         height: 100vh;
-        overflow-y: visible;
+        //overflow-y: visible;
+    }
+
+    .firstContent{
+        margin: 0;
+        width: 90vw;
+    }
+    .secondContent{
+        margin: 0;
+        width: 90vw;
+    }
+    .thirdContent{
+        margin: 0;
+        width: 90vw;
+    }
+    .arrowIcon{
+        color: #222831;
+    }
+    .tabs{
+        display: block;
+    }
+    .upTab{
+        font-size: 6vh;
+        margin-top: 1vh;
+        height:6vh;
+        width:30vw;
+        position:absolute;
+        background-color: #DDDDDD;
+        left: 35vw;
+        border-radius: 30px;
+        z-index: 1;
+        @include centerCont();
+    }
+    .downTab{
+        font-size: 6vh;
+        //margin-bottom: 1vh;
+        height:6vh;
+        width:30vw;
+        position:absolute;
+        background-color: #DDDDDD;
+        left: 35vw;
+        border-radius: 30px;
+        z-index: 1;
+        bottom: 1vh;
+        @include centerCont();
+    }
+    
+}
+@media (orientation: landscape) {
+    @media(max-width: 1000px) {
+        .sideNav{
+            width: 8vw;
+            height: 60vh;
+            top: 20vh;
+            
+            .one{
+                font-size: 4vw;
+            }
+            .two{
+                font-size: 2.3vw;
+            }
+            .three{
+                font-size: 1.8vw;
+            }
+        } 
     }
 }
+
 /*#endregion mediaQueries*/
 
 //============================================//

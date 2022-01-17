@@ -90,6 +90,23 @@ $('.three').click(function(){
     $('section')[index].scrollIntoView({behavior:'smooth'});
 });
 
+//============= Mobile btn control =============//
+
+$('.downTab').click(function(){
+    if (index < 2){
+        index++;
+    }
+    $('section')[index].scrollIntoView({behavior:'smooth'});
+    console.log(index);
+});
+
+$('.upTab').click(function(){
+    if (index > 0){
+        index--;
+    }
+    $('section')[index].scrollIntoView({behavior:'smooth'});
+    console.log(index);
+});
 
 //============= Dynamic text =============//
 
